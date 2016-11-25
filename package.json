@@ -1,0 +1,18 @@
+{
+  "name": "Socketorior",
+  "version": "1.0.0",
+  "description": "Nodejs WebSocket server that does crazy things!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo;",
+    "start": "./node_modules/.bin/pm2 start --no-daemon process.json"
+  },
+  "repository": "https://github.com/jkulak/socketorior",
+  "author": "Jakub Kułak <jakub.kulak@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.14.0",
+    "pm2": "^2.1.5",
+    "socket.io": "^1.6.0"
+  }
+}
