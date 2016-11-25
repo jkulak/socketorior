@@ -9,10 +9,11 @@ ENV NODE_ENV development
 # Add shell aliases
 RUN echo 'alias l="ls -la"' >> ~/.bashrc
 
-RUN npm install -g yarn
+# RUN npm install -g yarn
 
 COPY package.json /app
-RUN yarn install --verbose
+# RUN yarn install --verbose
+RUN npm install --verbose
 
 COPY . /app
 
