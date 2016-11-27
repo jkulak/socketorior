@@ -3,8 +3,8 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>👹 Socketorior</title>
-        <meta name="description" content="Socketorior! 👹">
+        <title>Socketorior</title>
+        <meta name="description" content="Sturdy Socketorior!">
 
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
@@ -12,19 +12,12 @@
 
         <!-- <link rel="stylesheet" href="/normalize.min.css"> -->
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-        <!-- <link rel="stylesheet" href="/main.css"> -->
+        <link rel="stylesheet" href="https://bootswatch.com/paper/bootstrap.min.css">
+        <link rel="stylesheet" href="/main.css">
+
 
     </head>
     <body>
-
-        <div class="container-fluid">
-            <h1>
-                I'm the mighty Socketorior!
-            </h1>
-        </div>
-        <div class="container-fluid">
-            <p class="lead">Welcome to Socketorior! Here you can test the power of WebSockets by doing crazy things!</p>
-        </div>
 
         <div class="container-fluid">
 
@@ -42,7 +35,7 @@
                     </form>
 
                     <ul id="messages">
-                        <li>Chat is empty...</li>
+                        
                     </ul>
                 </div>
                 <div class="col-md-4">
@@ -52,19 +45,30 @@
                     </ul>
                 </div>
                 <div class="col-md-4">
-                    <h2>Log</h2>
-                    <ul id="log">
-                        <li>Log is empty...</li>
+                    <h2>Rooms</h2>
+                    <ul id="rooms">
+                        <li>There are no rooms</li>
                     </ul>
                 </div>
             </div>
         </div>
 
+        <div class="overlay">
+            <div class="modal" id="login">
+                <form class="form-inline">
+                    <div class="form-group">
+                        <label for="nickname" class="hidden">Nickname</label>
+                        <input type="text" class="form-control" placeholder="Nickname"  maxlength="20">
+                    </div>
+                    <button type="submit" class="btn btn-primary hidden">Login</button>
+                </form>
+            </div>
+        </div>
 
         <script src="/socket.io/socket.io.js"></script>
         <script
-            src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
-            integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc="
+            src="https://code.jquery.com/jquery-3.1.1.min.js"
+            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
             crossorigin="anonymous"></script>
         <script src="/app.js"></script>
     </body>
